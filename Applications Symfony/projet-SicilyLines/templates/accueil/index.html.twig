@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Sicily Lines{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>        
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}
+        
+            	<header>
+		<div class="navbar">
+
+			<div class="LogoLink">
+				<h2>Sicily Lines</h2>
+			</div>
+
+			<ul class="NavLink">
+				<a class="NavLink" href="{{ path('accueil')}}" style="color:#00aaff;">Accueil</a>
+				<a class="NavLink" >Réservation</a>
+				<a class="NavLink" href="{{ path('contact')}}">Contact</a>
+			</ul>
+
+			<ul class="NavBtn">
+
+				<a class="NavLink" href="{{ path('inscription')}}">Inscription</a>
+				<a href="{{ path('connexion')}}"><button id="button">Connexion</button> </a>
+
+			</ul>
+
+
+
+	</header>
+
+
+
+
+	<main>
+		<div class="parent">
+
+			<div class='div1'>
+
+				<div class="SicilyImage">
+				</div>
+
+				<div class="ResaLine">
+					<div class="container-Resa-Menu">
+						<form>
+							<div class="PortD">
+								<span class="AE_Select">Port de départ</span>
+
+								<select required class="form2">
+									<option></option>
+									<option>Palerme</option>
+									<option>Syracuse</option>
+									<option>Taormina</option>
+								</select>
+								<span class="select-arrow"></span>
+							</div>
+
+							<div class="PortA">
+								<span class="AE_Select">Port d'arrivé</span>
+
+								<select required class="form2">
+								    <option></option>
+									<option>Palerme</option>
+									<option>Syracuse</option>
+									<option>Taormina</option>
+								</select>
+								<span class="select-arrow"></span>
+							</div>
+
+							<div class="DateD">
+								<span class="AE_Select">Date de départ</span>
+
+								<input required class="form2" type="date" id="start" name="trip-start" min="2022-05-01" max="2022-12-30">
+
+							</div>
+
+							<div class="DateA">
+								<span class="AE_Select">Date d'arrivée</span>
+
+								<input required class="form2"type="date" id="start" name="trip-start" min="2022-05-01" max="2022-12-30">
+
+							</div>
+
+							<div class="PortA">
+
+							</div>
+
+							<div class="Adulte">
+								<span class="AE_Select">Adulte</span>
+								<select required class="form2" style='width: 50px;'>
+								<option></option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								</select>
+							</div>
+
+							<div class="Enfant">
+								<span class="AE_Select">Enfant</span>
+								<select required class="form2" style='width: 50px;'>								
+								<option></option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								</select>
+							</div>
+
+							<div class="Recherche">
+								<button class="RechercheBtn">Rechercher</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+
+				<section>
+					<h1 class="BestDest">Les plus belles destinations</h1>
+				</section>
+			</div>
+
+			<div class="container">
+				<a href="/">
+					<div class="card1"></div>
+				</a>
+				<a href="/">
+					<div class="card2"></div>
+				</a>
+				<a href="/">
+					<div class="card3"></div>
+				</a>
+				<a href="/">
+					<div class="card4"></div>
+				</a>
+			</div>
+
+		</div>
+		</div>
+
+	</main>
+
+	<footer>
+
+
+
+	</footer>
+        
+        
+        
+        
+        
+        {% endblock %}
+    </body>
+</html>
