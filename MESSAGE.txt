@@ -1,0 +1,2 @@
+L'application Symfony ne fonctionne pas pour l'instant suite à un problème avec la base de données et les entités.
+Je suis entrain de travailler dessus.
