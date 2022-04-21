@@ -29,7 +29,7 @@ CREATE TABLE `bateau` (
   `largeur` double NOT NULL,
   `vitesse` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `bateau` (
 
 LOCK TABLES `bateau` WRITE;
 /*!40000 ALTER TABLE `bateau` DISABLE KEYS */;
+INSERT INTO `bateau` VALUES (3,'Eduardo',37.2,8.6,26),(4,'Platone',25,7,16);
 /*!40000 ALTER TABLE `bateau` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +53,7 @@ CREATE TABLE `categorie` (
   `id` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,6 +62,7 @@ CREATE TABLE `categorie` (
 
 LOCK TABLES `categorie` WRITE;
 /*!40000 ALTER TABLE `categorie` DISABLE KEYS */;
+INSERT INTO `categorie` VALUES (1,'A'),(2,'B'),(3,'C');
 /*!40000 ALTER TABLE `categorie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,7 +79,7 @@ CREATE TABLE `client` (
   `tel` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,6 +88,7 @@ CREATE TABLE `client` (
 
 LOCK TABLES `client` WRITE;
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
+INSERT INTO `client` VALUES (12,'thomas uyel','0781724394','thomas-uyel@gmail.com'),(19,'Paul Nord','0781424394','Paul-Nord@gmail.com'),(21,'Paul Sud','0781424394','Paul-Sud@gmail.com');
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,7 +109,7 @@ CREATE TABLE `contenir` (
   KEY `IDX_3C914DFDBCF5E72D` (`categorie_id`),
   CONSTRAINT `FK_3C914DFDA9706509` FOREIGN KEY (`bateau_id`) REFERENCES `bateau` (`id`),
   CONSTRAINT `FK_3C914DFDBCF5E72D` FOREIGN KEY (`categorie_id`) REFERENCES `categorie` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,6 +118,7 @@ CREATE TABLE `contenir` (
 
 LOCK TABLES `contenir` WRITE;
 /*!40000 ALTER TABLE `contenir` DISABLE KEYS */;
+INSERT INTO `contenir` VALUES (1,210,3,1),(2,9,3,2),(3,2,3,3),(4,155,4,1),(5,0,4,2),(6,0,4,3);
 /*!40000 ALTER TABLE `contenir` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +143,7 @@ CREATE TABLE `doctrine_migration_versions` (
 
 LOCK TABLES `doctrine_migration_versions` WRITE;
 /*!40000 ALTER TABLE `doctrine_migration_versions` DISABLE KEYS */;
-INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20220420230737','2022-04-21 01:08:02',43),('DoctrineMigrations\\Version20220420231406','2022-04-21 01:14:10',28),('DoctrineMigrations\\Version20220420231756','2022-04-21 01:18:03',53),('DoctrineMigrations\\Version20220420232041','2022-04-21 01:20:49',46),('DoctrineMigrations\\Version20220420232357','2022-04-21 01:28:52',48),('DoctrineMigrations\\Version20220420232845','2022-04-21 01:28:52',32),('DoctrineMigrations\\Version20220420233217','2022-04-21 01:32:26',68),('DoctrineMigrations\\Version20220420233422','2022-04-21 01:34:25',56),('DoctrineMigrations\\Version20220420233533','2022-04-21 01:35:50',48),('DoctrineMigrations\\Version20220420233620','2022-04-21 01:36:22',46),('DoctrineMigrations\\Version20220420233942','2022-04-21 01:39:46',48),('DoctrineMigrations\\Version20220420234018','2022-04-21 01:40:21',53),('DoctrineMigrations\\Version20220420234121','2022-04-21 01:42:07',43),('DoctrineMigrations\\Version20220420234209','2022-04-21 01:42:11',48),('DoctrineMigrations\\Version20220420234353','2022-04-21 01:43:56',86),('DoctrineMigrations\\Version20220420234642','2022-04-21 01:46:44',42),('DoctrineMigrations\\Version20220420234726','2022-04-21 01:47:29',64),('DoctrineMigrations\\Version20220420235207','2022-04-21 01:52:11',45),('DoctrineMigrations\\Version20220420235728','2022-04-21 01:57:36',70),('DoctrineMigrations\\Version20220420235917','2022-04-21 01:59:19',48),('DoctrineMigrations\\Version20220421003555','2022-04-21 02:35:59',93);
+INSERT INTO `doctrine_migration_versions` VALUES ('DoctrineMigrations\\Version20220420230737','2022-04-21 01:08:02',43),('DoctrineMigrations\\Version20220420231406','2022-04-21 01:14:10',28),('DoctrineMigrations\\Version20220420231756','2022-04-21 01:18:03',53),('DoctrineMigrations\\Version20220420232041','2022-04-21 01:20:49',46),('DoctrineMigrations\\Version20220420232357','2022-04-21 01:28:52',48),('DoctrineMigrations\\Version20220420232845','2022-04-21 01:28:52',32),('DoctrineMigrations\\Version20220420233217','2022-04-21 01:32:26',68),('DoctrineMigrations\\Version20220420233422','2022-04-21 01:34:25',56),('DoctrineMigrations\\Version20220420233533','2022-04-21 01:35:50',48),('DoctrineMigrations\\Version20220420233620','2022-04-21 01:36:22',46),('DoctrineMigrations\\Version20220420233942','2022-04-21 01:39:46',48),('DoctrineMigrations\\Version20220420234018','2022-04-21 01:40:21',53),('DoctrineMigrations\\Version20220420234121','2022-04-21 01:42:07',43),('DoctrineMigrations\\Version20220420234209','2022-04-21 01:42:11',48),('DoctrineMigrations\\Version20220420234353','2022-04-21 01:43:56',86),('DoctrineMigrations\\Version20220420234642','2022-04-21 01:46:44',42),('DoctrineMigrations\\Version20220420234726','2022-04-21 01:47:29',64),('DoctrineMigrations\\Version20220420235207','2022-04-21 01:52:11',45),('DoctrineMigrations\\Version20220420235728','2022-04-21 01:57:36',70),('DoctrineMigrations\\Version20220420235917','2022-04-21 01:59:19',48),('DoctrineMigrations\\Version20220421003555','2022-04-21 02:35:59',93),('DoctrineMigrations\\Version20220421062155','2022-04-21 08:22:01',33);
 /*!40000 ALTER TABLE `doctrine_migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,7 +158,7 @@ CREATE TABLE `equipement` (
   `id` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,6 +167,7 @@ CREATE TABLE `equipement` (
 
 LOCK TABLES `equipement` WRITE;
 /*!40000 ALTER TABLE `equipement` DISABLE KEYS */;
+INSERT INTO `equipement` VALUES (3,'Acces Handicape'),(4,'Bar'),(5,'Pont Promenade'),(6,'Salon Video');
 /*!40000 ALTER TABLE `equipement` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -186,7 +191,7 @@ CREATE TABLE `liaison` (
   CONSTRAINT `FK_225AC37141EAE06` FOREIGN KEY (`port_arrivee_id`) REFERENCES `port` (`id`),
   CONSTRAINT `FK_225AC3776E92A9C` FOREIGN KEY (`port_id`) REFERENCES `port` (`id`),
   CONSTRAINT `FK_225AC3794C9CCD3` FOREIGN KEY (`port_depart_id`) REFERENCES `port` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,6 +200,7 @@ CREATE TABLE `liaison` (
 
 LOCK TABLES `liaison` WRITE;
 /*!40000 ALTER TABLE `liaison` DISABLE KEYS */;
+INSERT INTO `liaison` VALUES (1,'01:30:00',6,2,NULL),(2,'04:00:00',7,2,NULL),(3,'01:25:00',8,3,NULL),(4,'01:45:00',9,3,NULL),(5,'02:05:00',10,3,NULL),(6,'00:50:00',7,4,NULL),(7,'00:40:00',9,4,NULL),(8,'02:30:00',11,5,NULL),(9,'00:30:00',12,5,NULL),(10,'00:55:00',8,4,NULL),(11,'01:25:00',6,8,NULL),(12,'01:55:00',5,9,NULL),(13,'03:00:00',6,5,NULL);
 /*!40000 ALTER TABLE `liaison` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +245,7 @@ CREATE TABLE `periode` (
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -248,6 +254,7 @@ CREATE TABLE `periode` (
 
 LOCK TABLES `periode` WRITE;
 /*!40000 ALTER TABLE `periode` DISABLE KEYS */;
+INSERT INTO `periode` VALUES (1,'2021-09-01','2022-06-15'),(2,'2022-06-16','2022-09-15'),(3,'2022-09-16','2023-05-31');
 /*!40000 ALTER TABLE `periode` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,7 +269,7 @@ CREATE TABLE `port` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -271,6 +278,7 @@ CREATE TABLE `port` (
 
 LOCK TABLES `port` WRITE;
 /*!40000 ALTER TABLE `port` DISABLE KEYS */;
+INSERT INTO `port` VALUES (2,'Palerme'),(3,'Messine'),(4,'Milazzo'),(5,'Trapani'),(6,'Ustica'),(7,'Lipari'),(8,'Stromboli'),(9,'Vulcano'),(10,'Panarea'),(11,'Pantelleria'),(12,'Favignagna');
 /*!40000 ALTER TABLE `port` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,7 +299,7 @@ CREATE TABLE `proposer` (
   KEY `IDX_21866C15806F0F5C` (`equipement_id`),
   CONSTRAINT `FK_21866C15806F0F5C` FOREIGN KEY (`equipement_id`) REFERENCES `equipement` (`id`),
   CONSTRAINT `FK_21866C15A9706509` FOREIGN KEY (`bateau_id`) REFERENCES `bateau` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -300,6 +308,7 @@ CREATE TABLE `proposer` (
 
 LOCK TABLES `proposer` WRITE;
 /*!40000 ALTER TABLE `proposer` DISABLE KEYS */;
+INSERT INTO `proposer` VALUES (2,2,3,3),(3,1,3,4),(4,1,3,5),(5,1,3,6),(6,1,4,3),(7,1,4,5);
 /*!40000 ALTER TABLE `proposer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -445,6 +454,33 @@ LOCK TABLES `type` WRITE;
 /*!40000 ALTER TABLE `type` DISABLE KEYS */;
 /*!40000 ALTER TABLE `type` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `roles` json NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'noam@gmail.com','[]','$argon2id$v=19$m=65536,t=4,p=1$GLqEQ87IEy2GVe8QZk1a1w$x/O1wTFCv2/MTqgWZzsKBPK1JIkh2Rai6ARRrfrYaKE');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -455,4 +491,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-21  2:36:18
+-- Dump completed on 2022-04-21 11:10:19

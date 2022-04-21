@@ -31,8 +31,7 @@
 
 			<ul class="NavBtn">
 
-				<a class="NavLink" href="{{ path('inscription')}}">Inscription</a>
-				<a href="{{ path('connexion')}}"><button id="button" style="background-color:#ffffff; color: black; ">Connexion</button> </a>
+				<a class="NavLink">Bienvenue : {{ app.user.username }}</a>
 
 			</ul>
 	</header>
@@ -42,33 +41,7 @@
 
 	<main>
 
-		<div class="parent">
-
-			<div class='div1'>
-
-				<div class="container-LogIn">
-					<form name="form1" class="box">
-
-					  	<h5>Connexion</h5>
-						  
-						<input required type="text" name="email" placeholder="Adresse e-mail" autocomplete="off">
-
-						<input required type="password" name="password" placeholder="Mot de passe" id="pwd" autocomplete="off">
-
-						<input type="submit" value="Connexion" class="btn1">
-
-					  </form>
-
-						<a href="{{ path('inscription')}}" class="dnthave">Créer un compte</a>
-				  </div> 
-
-
-
-
-
-			</div>
-		</div>
-
+		
 	</main>
             {% endblock %}
 
