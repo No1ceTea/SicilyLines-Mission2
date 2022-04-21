@@ -1,0 +1,22 @@
+accueil:
+    path: /accueil
+    controller: App\Controller\AccueilController::index
+login:
+     path: /login
+     controller: App\Controller\AuthController::index
+     
+register:
+     path: /register
+     controller: App\Controller\RegistrationController::index
+
+contact:
+     path: /contact
+     controller: App\Controller\ContactController::index
+
+reservation:
+     path: /Reservation
+     controller: App\Controller\ReservationController::index
+
+compte:
+     path: /compte
+     controller: App\Controller\CompteController::index

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Sicily Lines{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+        <link href="{{ asset('css/Login.css') }}" rel="stylesheet" type="text/css"/>        
+        {% endblock %}
+
+</head>
+
+<body>
+        {% block body %}
+
+
+	<header>
+		<div class="navbar">
+
+			<div class="LogoLink">
+				<h2>Sicily Lines</h2>
+			</div>
+
+			<ul class="NavLink">
+				<a class="NavLink" href="{{ path('accueil')}}">Accueil</a>
+				<a class="NavLink" href="{{ path('reservation')}}">Réservation</a>
+				<a class="NavLink" href="{{ path('contact')}}">Contact</a>
+			</ul>
+
+			<ul class="NavBtn">
+
+				<a class="NavLink">Bienvenue sur votre espace: {{ app.user.username }}</a>
+
+			</ul>
+	</header>
+
+
+
+
+	<main>
+
+		<div class="parent">
+
+			<div class='div1' >
+
+				<div class="container-LogIn" >
+					<form name="form1" class="box" >
+
+					  	<h5>Espace Client</h5>
+						  
+						<input required class="box" type="text" name="email" placeholder={{ app.user.username }} autocomplete="off">
+
+						<input required class="box" type="text" name="tel" placeholder="Telephone" autocomplete="off">
+
+                        <input required class="box" type="password" name="OldPassword" placeholder="Ancien Mot de passe" autocomplete="off">
+
+
+                        <input required class="box" type="password" name="NewPassword" placeholder="Nouveau Mot de passe" autocomplete="off">
+
+
+						<input type="submit" value="Modifiez" class="btn1" style="margin-top: 150px;">
+
+					  </form>
+				  </div> 
+
+
+
+
+
+			</div>
+		</div>
+
+	</main>
+            {% endblock %}
+
+</body>
+
+</html>

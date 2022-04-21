@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Reservation{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+        <link href="{{ asset('css/Login.css') }}" rel="stylesheet" type="text/css"/>        
+        {% endblock %}
+
+</head>
+
+<body>
+        {% block body %}
+
+
+	<header>
+		<div class="navbar">
+
+			<div class="LogoLink">
+				<h2>Sicily Lines</h2>
+			</div>
+
+			<ul class="NavLink">
+				<a class="NavLink" href="{{ path('accueil')}}">Accueil</a>
+				<a class="NavLink" href="{{ path('reservation')}}" style="color:#00aaff ">Réservation</a>
+				<a class="NavLink" href="{{ path('contact')}}">Contact</a>
+			</ul>
+
+			<ul class="NavBtn">
+
+				<a class="NavLink" href="{{ path('register')}}">Inscription</a>
+				<a href="{{ path('login')}}"><button id="button">Connexion</button> </a>
+
+			</ul>
+	</header>
+
+    	<main>
+
+		<div class="parent">
+
+			<div class='div1'>
+
+				<div class="container-LogIn">
+					<form name="form1" class="box">
+
+					  	<h5>Reservez : </h5>
+						  
+
+
+						<input type="submit" value="Confirmer" class="btn1">
+
+					  </form>
+				  </div> 
+
+
+
+
+
+			</div>
+		</div>
+
+	</main>
+
+
+
+
+
+    
+            {% endblock %}
+
+</body>
+
+</html>
