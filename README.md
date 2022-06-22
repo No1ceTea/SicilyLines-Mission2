@@ -1,8 +1,7 @@
 # SicilyLines-Mission2
 
 ## Objectif
-    La seconde mission consiste à mettre à neuf tout le site web SicilyLines car il ne respectait pas toutes les recommandations du RGPD en vigueur et n'était pas attrayante et ergonomique.
-    Nous devions donc développer un site web qui respecte absolument les recommandations du RGPD, avoir un site web plus dynamique et intuitif pour améliorer la communication avec la copmpagnie.
+La seconde mission consiste à mettre à neuf tout le site web SicilyLines car il ne respectait pas toutes les recommandations du RGPD en vigueur et n'était pas attrayante et ergonomique. Nous devions donc développer un site web qui respecte absolument les recommandations du RGPD, avoir un site web plus dynamique et intuitif pour améliorer la communication avec la copmpagnie.
 
 ## Stack
  - [Symfony](https://symfony.com/) - Symfony est un framework MVC en PHP et comporte donc des composants PHP. Il est moduliare et s'adapte rapidement ce qui permet d'accélérer la production et le développement d'un site web
