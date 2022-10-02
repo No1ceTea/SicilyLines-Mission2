@@ -1,6 +1,6 @@
 # SicilyLines-Mission2
 
-## Objectif
+## Goal
 The second mission is to refurbish the entire SicilyLines website because it did not respect all the recommendations of the GDPR in force and was not attractive and ergonomic. We therefore had to develop a website that absolutely respects the recommendations of the GDPR, to have a more dynamic and intuitive website to improve communication with the company.
 
 ## Stack
